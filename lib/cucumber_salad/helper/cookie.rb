@@ -1,3 +1,4 @@
+require 'cgi'
 module Helper
   module Cookie
     def self.init_cookies
