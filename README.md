@@ -69,6 +69,12 @@ Methods can be stubbed using the stub api. Depending on your environment the stu
 In your cucumber env you will need to set the path where your application will look for stubs:
 
 ```ruby
+Helper::Environment.stub_path = '/path/to/stub/directory'
+```
+
+To send a stub to redis/file system:
+
+```ruby
 Helper::Stub.create_key('class_name', 'method_name')
 Helper::Stub.register(:content => {
     :response => {
@@ -77,3 +83,32 @@ Helper::Stub.register(:content => {
   }
 )
 ```
+
+Exceptions can be thrown if your library supports it:
+
+```ruby
+Helper::Stub.create_key('class_name', 'method_name')
+Helper::Stub.register(:content => {
+    :exceptionType => "YOUR_EXCEPTION_CLASS"
+  }
+)
+```
+
+Defaults can be setup by storing json files with the key from Helper::Stubs.create_key as the filename.
+
+These will be automatically set on each request. You must set your defaults location:
+
+```ruby
+Helper::Environment.default_stub_path = '/path/to/default/stubs'
+```
+
+## Environment API
+
+The environment API helps with getting information regarding the current environment:
+
+* host - uses the env to determine correct domain
+* env - TARGET_ENV or sandbox
+* stub_path - Your current stub path
+* default_stub_path - Your current default stub path
+* proxy - Web proxy is configured from your http_proxy env
+* remote? - Is this request local or on a remote machine
