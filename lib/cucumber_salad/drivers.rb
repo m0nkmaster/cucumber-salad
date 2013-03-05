@@ -1,0 +1,1 @@
+Dir[File.dirname(__FILE__) + "/drivers/*.rb"].each {|driver| require driver }

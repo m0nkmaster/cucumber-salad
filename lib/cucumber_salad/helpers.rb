@@ -1,0 +1,1 @@
+Dir[File.dirname(__FILE__) + "/helper/*.rb"].each {|helper| require helper }
