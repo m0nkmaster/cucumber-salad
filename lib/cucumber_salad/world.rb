@@ -1,4 +1,4 @@
-require 'before'
+require 'cucumber_salad/before'
 World(Helper::Cookie)
 World(Helper::Device)
 World(Helper::Environment)
