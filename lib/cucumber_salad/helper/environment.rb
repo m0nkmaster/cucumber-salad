@@ -61,4 +61,3 @@ module Helper
                     :remote?
   end
 end
-World(Helper::Environment)

@@ -80,5 +80,3 @@ module Helper
     
   end
 end
-
-World(Helper::Stub)

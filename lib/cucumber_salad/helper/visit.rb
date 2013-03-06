@@ -12,4 +12,3 @@ module Helper
     end
   end
 end
-World(Helper::Visit)

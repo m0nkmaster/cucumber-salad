@@ -19,4 +19,3 @@ module Helper
     
   end
 end
-World(Helper::Sleep)

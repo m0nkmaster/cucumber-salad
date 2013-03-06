@@ -5,4 +5,3 @@ module Helper
     end
   end
 end
-World(Helper::Flagpole)
