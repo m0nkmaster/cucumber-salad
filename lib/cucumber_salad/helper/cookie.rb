@@ -2,10 +2,11 @@ require 'cgi'
 module Helper
   module Cookie
     def self.init_cookies
-      unless @cookies
-        @cookies = {}
-        self.register_defaults
-      end
+      @cookies ||= {}
+    end
+    
+    def self.all
+      @cookies
     end
     
     def self.add(key, value, options = {})
@@ -43,11 +44,6 @@ module Helper
       end
     end
     
-    def self.register_defaults
-      self.add_test_cookie('serviceMocking', '1')
-      self.add_test_cookie('enableSiteConfig', '1')
-    end
-    
     def self.domain_for_cookie(cookie)
       if cookie[:options][:domain]
         cookie[:options][:domain]
@@ -57,5 +53,10 @@ module Helper
     def self.base64_encode(key)
       CGI.escape(Base64.encode64(key).gsub("\n", ""))
     end
+    
+    def self.reset
+      @cookies = nil
+    end
+    
   end
 end

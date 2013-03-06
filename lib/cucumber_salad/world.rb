@@ -1,3 +1,4 @@
+require 'before'
 World(Helper::Cookie)
 World(Helper::Device)
 World(Helper::Environment)
