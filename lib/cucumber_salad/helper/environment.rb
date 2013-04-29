@@ -17,6 +17,7 @@ module Helper
     
     def stub_path
       raise "Please set your stub path using Helper::Environment.stub_path = '/path'" unless @stub_path
+      FileUtils.mkdir_p(@stub_path) unless Dir.exists?(@stub_path)
       @stub_path
     end
     
@@ -26,6 +27,7 @@ module Helper
     
     def default_stub_path
       raise "Please set your default stub path using Helper::Environment.default_stub_path = '/path'" unless @default_stub_path
+      FileUtils.mkdir_p(@default_stub_path) unless Dir.exists?(@default_stub_path)
       @default_stub_path
     end
     
