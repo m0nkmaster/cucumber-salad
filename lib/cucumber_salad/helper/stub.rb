@@ -5,7 +5,9 @@ module Helper
     def self.clear
       Dir.foreach self.stub_file_path do |file|
         next if file == '.' or file == '..' or file == '.svn'
-        File.delete(File.join(self.stub_file_path, file))
+        if File.exists?(file)
+          File.delete(File.join(self.stub_file_path, file))
+        end
       end
     end
     
