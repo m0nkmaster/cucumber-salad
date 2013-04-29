@@ -3,7 +3,7 @@ lib = File.expand_path('../lib/', __FILE__)
 $:.unshift lib unless $:.include?(lib)
 
 Gem::Specification.new do |s|
-  s.name = "m0nkmaster/cucumber_salad"
+  s.name = "m0nkmaster_cucumber_salad"
   s.version = "0.0.1"
   s.authors = ["Matthew Crouch"]
   s.email = ["Matthew.Crouch@bbc.co.uk"]
@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.summary = "Gem to ease the pain of managing capybara driver config and provide a home for common utils and patches"
   #s.files = `git ls-files`.split("\n")
   
-  s.add_runtime_dependency("capybara", [">=2.0.2"])
+  s.add_runtime_dependency("capybara", ["~>1.1"])
   s.add_runtime_dependency("cucumber", [">=1.2.1"])
   s.add_runtime_dependency("rspec", [">=2.1.3"])
   s.add_runtime_dependency("poltergeist", [">=1.1.0"])
