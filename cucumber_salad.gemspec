@@ -3,7 +3,7 @@ lib = File.expand_path('../lib/', __FILE__)
 $:.unshift lib unless $:.include?(lib)
 
 Gem::Specification.new do |s|
-  s.name = "cucumber_salad"
+  s.name = "m0nkmaster/cucumber_salad"
   s.version = "0.0.1"
   s.authors = ["Matthew Crouch"]
   s.email = ["Matthew.Crouch@bbc.co.uk"]
