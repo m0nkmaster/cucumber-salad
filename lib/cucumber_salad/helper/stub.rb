@@ -44,7 +44,7 @@ module Helper
     end
     
     def self.write
-      if @stubs
+      if @stubs and @stubs.size > 0
         self.write_to_store
       end
     end
