@@ -4,9 +4,9 @@ $:.unshift lib unless $:.include?(lib)
 
 Gem::Specification.new do |s|
   s.name = "m0nkmaster_cucumber_salad"
-  s.version = "0.0.2"
+  s.version = "0.0.3"
   s.authors = ["Rob MacDonald"]
-  s.email = ["Matthew.Crouch@bbc.co.uk"]
+  s.email = ["rob@robmacdonald.com"]
   s.description = "A gem to manage the usage of cucumber/mocking/multiple devices"
   
   s.files = Dir.glob("{features,lib,bin,config,vendor,.bundle}/**/*") +  %w(Gemfile)
@@ -16,8 +16,8 @@ Gem::Specification.new do |s|
   #s.files = `git ls-files`.split("\n")
   
   s.add_runtime_dependency("capybara", ["~>1.1.4"])
-  s.add_runtime_dependency("cucumber", [">=1.2.1"])
+  s.add_runtime_dependency("cucumber", ["~=1.2.1"])
   s.add_runtime_dependency("rspec", [">=2.1.3"])
   s.add_runtime_dependency("poltergeist", ["~>1.0.2"])
-  s.add_runtime_dependency("redis", [">=3.0.2"])
+  s.add_runtime_dependency("redis", ["~=3.0.2"])
 end
